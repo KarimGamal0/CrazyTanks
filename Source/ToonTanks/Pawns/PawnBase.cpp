@@ -3,7 +3,7 @@
 
 #include "PawnBase.h"
 #include "Components/CapsuleComponent.h"
-#include "ProjectileBase.h"
+#include "ToonTanks/Actors/ProjectileBase.h"
 
 // Sets default values
 APawnBase::APawnBase()

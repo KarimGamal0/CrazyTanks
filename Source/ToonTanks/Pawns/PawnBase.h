@@ -24,19 +24,19 @@ private:
 		UStaticMeshComponent* TurretMesh;
 	UPROPERTY(VisibleAnyWhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
 		USceneComponent* ProjectileSpwanPoint;
+
 	//VARIABLES
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Projectile Type", meta = (AllowPrivateAccess = "true"))
-	TSubclassOf<AProjectileBase> ProjectileClass;
+		TSubclassOf<AProjectileBase> ProjectileClass;
 
 public:
 	// Sets default values for this pawn's properties
 	APawnBase();
 
+	virtual void HandleDestruction();
+
 protected:
 	void RotateTurret(FVector LookAtTarget);
 
 	void Fire();
-
-	virtual void HandleDestruction();
-
 };

@@ -15,14 +15,6 @@ void APawnTurret::BeginPlay()
 	PlayerPawn = Cast<APawnTank>(UGameplayStatics::GetPlayerPawn(this, 0));
 }
 
-void APawnTurret::HandleDestruction()
-{
-	Super::HandleDestruction();
-
-	Destroy();
-}
-
-
 // Called every frame
 void APawnTurret::Tick(float DeltaTime)
 {
@@ -60,3 +52,9 @@ float APawnTurret::ReturnDistanceToPlayer()
 	return FVector::Dist(PlayerPawn->GetActorLocation(), GetActorLocation());
 }
 
+void APawnTurret::HandleDestruction()
+{
+	Super::HandleDestruction();
+
+	Destroy();
+}
